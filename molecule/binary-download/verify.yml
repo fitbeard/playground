@@ -37,6 +37,4 @@
     - name: List images
       ansible.builtin.command: crictl images
       register: images
-
-    - debug:
-        msg: "{{ images }}"
+      failed_when: not(images.stdout.find('alpine') != -1)

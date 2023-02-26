@@ -19,7 +19,7 @@
 
 - name: Copy crictl binary from download dir
   ansible.builtin.copy:
-    src: "{{ crictl_download.dest }}"
+    src: "{{ binary_download_local_release_dir }}/crictl"
     dest: "{{ crictl_bin_dir }}/crictl"
     mode: 0755
     remote_src: true
