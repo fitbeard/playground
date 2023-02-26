@@ -1,0 +1,15 @@
+---
+exclude_paths:
+  - .github
+  - atmosphere
+  - charts
+  - molecule
+  - playbooks
+  - roles/kube_prometheus_stack/files/jsonnet
+
+warn_list:
+  - jinja[invalid]
+  - jinja[spacing]
+  - name[casing]
+  - template-instead-of-copy
+  - yaml[line-length]
